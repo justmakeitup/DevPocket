@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FFFFFF;
+    --foreground: #090A10;
+  }
+
+  .dark {
+    --background: #070709;
+    --foreground: #F8FAFC;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  overflow-x: hidden;
+}
+
+/* Subtle dot-grid texture on dark mode background */
+.dark body {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Light mode strict clean white background */
+.light body {
+  background-color: #FFFFFF;
+  background-image: none;
+}
+
+/* Hide default system cursor when custom cursor is active on fine-pointer desktop devices */
+@media (pointer: fine) {
+  html.custom-cursor-enabled,
+  html.custom-cursor-enabled body,
+  html.custom-cursor-enabled a,
+  html.custom-cursor-enabled button,
+  html.custom-cursor-enabled input,
+  html.custom-cursor-enabled select,
+  html.custom-cursor-enabled textarea,
+  html.custom-cursor-enabled [role="button"],
+  html.custom-cursor-enabled [role="link"],
+  html.custom-cursor-enabled label,
+  html.custom-cursor-enabled * {
+    cursor: none !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 140, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 140, 0.45);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.4);
+}
+
+/* Neon glow helper classes */
+.neon-glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+}
+
+.neon-glow-violet {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+}
+
+.neon-border-gradient {
+  border-image: linear-gradient(135deg, #00F0FF, #3B82F6, #8B5CF6) 1;
+}
+
+/* Code editor styling */
+pre, code, textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
