@@ -117,7 +117,12 @@ export default function ContactPage() {
 
           <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800 text-xs text-neutral-500 font-mono">
             <span>Direct contact email: </span>
-            <span className="text-foreground font-semibold">hello@devpocket.dev</span>
+            <a
+              href="mailto:ranit.das.1321@gmail.com"
+              className="text-neon-cyan hover:underline font-semibold"
+            >
+              ranit.das.1321@gmail.com
+            </a>
           </div>
         </div>
 

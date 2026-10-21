@@ -86,7 +86,7 @@ export default function PrivacyPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-foreground">5. Contact Information</h2>
             <p>
-              If you have any questions regarding this Privacy Policy or our security practices, contact us at <code>hello@devpocket.dev</code>.
+              If you have any questions regarding this Privacy Policy or our security practices, contact us directly at <a href="mailto:ranit.das.1321@gmail.com" className="text-neon-cyan underline"><code>ranit.das.1321@gmail.com</code></a>.
             </p>
           </section>
         </div>

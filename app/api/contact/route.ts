@@ -75,15 +75,16 @@ export async function POST(request: NextRequest) {
     }
 
     const provider = process.env.CONTACT_EMAIL_PROVIDER || 'mock';
+    const recipientEmail = process.env.CONTACT_EMAIL_TO || 'ranit.das.1321@gmail.com';
 
     // Real provider implementation (e.g. Resend or webhook) if configured
     if (provider === 'resend' && process.env.RESEND_API_KEY) {
       // In production with Resend configured:
       // await resend.emails.send(...)
-      console.log('[DevPocket Contact] Dispatching via Resend:', { name, email, subject });
+      console.log('[DevPocket Contact] Dispatching via Resend to:', recipientEmail, { name, email, subject });
     } else {
       // Honest mock mode: log delivery and inform user honestly
-      console.log('[DevPocket Contact] Received submission in local mock mode:', {
+      console.log('[DevPocket Contact] Received submission intended for:', recipientEmail, {
         name,
         email,
         category: category || 'general',

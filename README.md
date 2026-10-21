@@ -123,7 +123,7 @@ NEXT_PUBLIC_GITHUB_REPO_URL=https://github.com/example/devpocket
 
 # Optional Contact Form Provider (defaults to honest local logging mode)
 CONTACT_EMAIL_PROVIDER=mock
-CONTACT_EMAIL_TO=admin@example.com
+CONTACT_EMAIL_TO=ranit.das.1321@gmail.com
 RESEND_API_KEY=
 
 # Optional Privacy-Safe Analytics (disabled by default until user cookie consent)
